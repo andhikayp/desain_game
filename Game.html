@@ -251,11 +251,12 @@
             <div class="continue"> <p> Play Again? </p> </div>
 
             <div class="opcoes">
-                <div class="yes"> <a href=""> YES </a> </div>
-                <div class="no"> <a href="Home.html"> NO </a> </div>
+                <div class="yes"> <a href="" onclick="music()"> YES </a> </div>
+                <div class="no"> <a href="Home.html" onclick="music()"> NO </a> </div>
             </div>
-
+            
         </div>
+        <audio id="my_audio" src="src/music/increase_score.mp3" loop="loop"></audio>
     </body>
     <script>
         function random_bg_color() {
@@ -270,6 +271,10 @@
         const interval = setInterval(function() {
             random_bg_color();
         }, 3000);
+
+        function music() {
+          document.getElementById("my_audio").play();
+        }
     </script>
 
 </html>

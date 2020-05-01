@@ -12,6 +12,8 @@ var boleh1,boleh2;
 var score1=10, score2=10;
 var temp1, temp2;
 var tinggi1, tinggi2;
+var timer = 0;
+
 function init() {
 	// set up the scene
 	createScene();
@@ -628,6 +630,9 @@ function cektabrak(){
 
 }
 function update(){
+	timer += 1;
+	document.getElementById("timer").innerHTML = "Score: " + timer;
+
 	stats.update();
 	//animate
 	// temp1 = currentLane;
@@ -678,6 +683,7 @@ function update(){
 			nabrak = new Audio('src/music/nabrak_pohon.mp3');
 			nabrak.volume=0.3;
 			nabrak.play();
+
 			document.getElementById("scores").innerHTML = score1 + "-" + score2;
 			hasCollided = false;
 		}
@@ -699,6 +705,8 @@ function update(){
 	render();
 	if(score1<=0)
 	{
+		score2 = score2*timer
+		document.getElementById("result_score").innerHTML = "Player 1 : "+timer+"<br>Player 2 : "+score2;
 		document.getElementById("player").innerHTML = "Player 2 Wins!";
 		bgmusik.pause();
 		kalah = new Audio('src/music/kalah.mp3');
@@ -710,6 +718,8 @@ function update(){
 	}
 	else if(score2<=0)
 	{
+		score1 = score1*timer
+		document.getElementById("result_score").innerHTML = "Player 1 : "+score1+"<br>Player 2 : "+timer;
 		document.getElementById("player").innerHTML = "Player 1 Wins!";
 		bgmusik.pause();
 		kalah = new Audio('src/music/kalah.mp3');

@@ -1,5 +1,6 @@
-# Final Project Grafika Komputer
+# Final Project Desain Permainan
 
-Game bisa di mainkan di link bawah ini:
-
-https://rollingwbb.azurewebsites.net
+### Anggota :
+* Safhira Maharani 05111740000027
+* Andhika Yoga Perdana 05111740000101
+* Vinsensius Yuda Pratama 05111740000156

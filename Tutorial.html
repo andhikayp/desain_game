@@ -734,11 +734,16 @@ return this;
             <div class="column">
             </div>
             <div class="column">
-                  <a href="Home.html"><img style="height: 30%; width: 40%; margin-left: 350px; margin-bottom: 50px;" src="images/back.jpg" alt=""></a>
+                  <a href="Home.html" onclick="music()"><img style="height: 30%; width: 40%; margin-left: 350px; margin-bottom: 50px;" src="images/back.jpg" alt=""></a>
             </div>
         </div>
     </div>
-
+    <audio id="my_audio" src="src/music/increase_score.mp3" loop="loop"></audio>
+    
 </body>
-
+<script>
+  function music() {
+    document.getElementById("my_audio").play();
+  }
+</script>
 </html>

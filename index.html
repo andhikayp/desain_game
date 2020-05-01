@@ -736,11 +736,16 @@ return this;
           <p style="font-size: 20px;"><b><i>Final Project Mata Kuliah Desain Permainan</i></b>
           </p>
         </div>
-
+        <audio id="my_audio" src="src/music/increase_score.mp3" loop="loop"></audio>
         <div class="container text-center" style="border-top: solid;1px; border-right: solid;1px; border-left: solid;1px; color: white">
-          <a class="btn btn-sm btn-success mt-2" href="Home.html">Let's Start It!</a>
+          <a class="btn btn-success mt-2" href="Home.html" onclick="music()">Let's Start It!</a>
         </div>
       </div>
     </div>
 </body>
+<script>
+  function music() {
+    document.getElementById("my_audio").play();
+  }
+</script>
 </html>

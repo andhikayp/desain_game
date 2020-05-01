@@ -702,8 +702,10 @@ function update(){
 		document.getElementById("player").innerHTML = "Player 2 Wins!";
 		bgmusik.pause();
 		kalah = new Audio('src/music/kalah.mp3');
+		kalah2 = new Audio('src/music/gameover.mp3');
 		bgmusik.loop=true;
 		kalah.play();
+		kalah2.play();
 		toggleGameOver();
 	}
 	else if(score2<=0)
@@ -711,8 +713,10 @@ function update(){
 		document.getElementById("player").innerHTML = "Player 1 Wins!";
 		bgmusik.pause();
 		kalah = new Audio('src/music/kalah.mp3');
+		kalah2 = new Audio('src/music/gameover.mp3');
 		bgmusik.loop=true;
 		kalah.play();
+		kalah2.play();
 		toggleGameOver();
 	}
 	else{
